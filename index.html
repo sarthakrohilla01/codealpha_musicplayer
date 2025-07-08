@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <div class="music-player">
+        <div class="album-art" id="albumArt">🎵</div>
+        
+        <div class="song-info">
+            <div class="song-title" id="songTitle">Select a Song</div>
+            <div class="song-artist" id="songArtist">Unknown Artist</div>
+            <div class="song-duration" id="songDuration">0:00 / 0:00</div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="time-info">
+                <span id="currentTime">0:00</span>
+                <span id="totalTime">0:00</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn" id="prevBtn">⏮</button>
+            <button class="control-btn play-pause-btn" id="playPauseBtn">▶</button>
+            <button class="control-btn" id="nextBtn">⏭</button>
+        </div>
+
+        <div class="volume-container">
+            <span class="volume-icon">🔊</span>
+            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="50">
+        </div>
+
+        <div class="autoplay-toggle">
+            <span>Autoplay</span>
+            <div class="toggle-switch" id="autoplayToggle">
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+
+        <button class="playlist-toggle" id="playlistToggle">📋 Show Playlist</button>
+        
+        <div class="playlist" id="playlist" style="display: none;">
+        </div>
+
+        <audio id="audioPlayer" preload="metadata"></audio>
+    </div>
+<script src="assets/script.js"></script>
+</body>
+</html>
